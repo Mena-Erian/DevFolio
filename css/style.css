@@ -1,0 +1,428 @@
+:root {
+    --h2-color: rgb(30, 30, 30);
+    --p-color: rgb(78, 78, 78);
+    --primary-color: rgb(13, 110, 253);
+    --info-color: rgb(13, 202, 240);
+    scroll-padding-top: 3rem;
+}
+p {
+    color: var(--p-color);
+}
+.down-border-primary {
+    position: relative;
+}
+
+/* START NAVBAR */
+
+nav {
+    background-color: white;
+}
+
+nav a {
+    color: white !important;
+}
+
+nav li:hover a,
+nav a.active {
+    color: var(--info-color) !important;
+}
+
+.dropdown-toggle::after {
+    border: none;
+}
+
+/* END NAVBAR */
+/* START UP */
+
+i.up {
+    --size-text: 2.1875rem;
+    width: var(--size-text);
+    height: var(--size-text);
+    font-size: 1rem;
+    background-color: #0d6efd;
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+i.up::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* END UP */
+
+/* START HEADER */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url(../images/hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header h1 {
+    font-size: 3rem;
+}
+
+header span.typed-cursor {
+    font-size: 2rem;
+}
+/* END HEADER */
+/* START ABOUT */
+#about .progress {
+    height: 0.75rem;
+    margin: 0.625rem 0 1rem;
+}
+#about article h2 {
+    margin-bottom: 3rem;
+}
+#about article h2.down-border-primary::after {
+    content: "";
+    position: absolute;
+    top: 135%;
+    left: 9%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+#about article p {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+/* END ABOUT */
+/* START SERVICES */
+
+#services > p {
+    position: relative;
+}
+#services > p::after,
+.down-border-primary::after {
+    content: "";
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 5px;
+    background-color: var(--primary-color);
+}
+
+section#services > h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--h2-color);
+}
+
+#services i {
+    font-size: 2.5rem;
+    position: relative;
+    transition: all 0.5s;
+    border-radius: 50%;
+    padding: 3rem;
+    border-width: 10px !important;
+    border-style: solid !important;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+#services i:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#services .row > div:hover i {
+    color: white;
+    background-color: #0d6efd;
+    border-color: rgb(208, 227, 255) !important;
+}
+
+#services h3 {
+    text-transform: uppercase;
+}
+
+/* END SERVICES */
+/* START experienceWork */
+#experienceWork {
+    background-image: linear-gradient(
+            rgba(0, 119, 255, 0.65),
+            rgba(0, 119, 255, 0.65)
+        ),
+        url(../images/counters-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* height: 75vh; */
+    color: white;
+}
+
+#experienceWork .row i {
+    font-size: 2rem;
+    position: relative;
+    transition: all 0.5s;
+    border-radius: 50%;
+    padding: 2rem;
+    border-width: 10px !important;
+    border-style: solid !important;
+    width: 2rem;
+    height: 2rem;
+    border-color: rgba(255, 255, 255, 0.75);
+}
+
+#experienceWork .row i::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#experienceWork span {
+    font-size: 2rem;
+    font-weight: normal;
+}
+#experienceWork p {
+    color: white !important;
+}
+
+/* END experienceWork */
+
+/* START PORTFOLIO */
+
+#portfolio .card-body a {
+    right: 7%;
+}
+#portfolio .card-body i {
+    position: relative;
+    font-size: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 1.3rem;
+    color: white;
+    background-color: rgb(0, 120, 255);
+    border: 3px solid rgb(0, 120, 255);
+    border-radius: 50%;
+}
+#portfolio i:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#portfolio .transtion-scale img {
+    transition: all 1s;
+}
+#portfolio .transtion-scale:hover img {
+    transform: scale(1.2);
+}
+/* END PORTFOLIO */
+/* START EMPLOYEE */
+#employee {
+    background-image: linear-gradient(
+            rgba(0, 119, 255, 0.65),
+            rgba(0, 119, 255, 0.65)
+        ),
+        url(../images/overlay-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* height: 75vh; */
+    color: white;
+}
+#employee .carousel-item img {
+    width: 100px;
+}
+#employee .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: relative;
+    top: 10%;
+}
+
+#employee p {
+    font-size: 1.25rem;
+}
+#employee h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+}
+/* END EMPLOYEE */
+/* START BLOG */
+#blog .btn-card-blog {
+    width: fit-content;
+    background-color: var(--primary-color);
+    color: white;
+}
+#blog .btn-card-blog:hover {
+    cursor: default;
+}
+#blog h5 a {
+    color: black;
+    transition: all 0.5s;
+}
+#blog h5 a:hover {
+    color: var(--primary-color);
+}
+#blog a.card-link {
+    color: rgb(33, 37, 41);
+}
+#blog .list-group-item > div span {
+    color: rgb(78, 78, 78);
+}
+#blog .list-group-item img {
+    width: 2.1875rem !important;
+}
+#blog .list-group-item a {
+    text-decoration: none;
+    transition: all 0.5s;
+    font-size: 1rem;
+    color: rgb(33, 37, 41);
+}
+#blog .list-group-item a:hover {
+    color: var(--primary-color);
+}
+/* END BLOG */
+/* START CONTACT */
+.start-border-primary {
+    position: relative;
+    text-align: start;
+    width: fit-content;
+}
+.start-border-primary::after {
+    content: "";
+    position: absolute;
+    top: 130%;
+    left: 20%;
+    right: 35%;
+    transform: translateX(-50%);
+    height: 5px;
+    background-color: var(--primary-color);
+}
+
+#contact {
+    background-image: linear-gradient(
+            rgba(0, 119, 255, 0.65),
+            rgba(0, 119, 255, 0.65)
+        ),
+        url(../images/overlay-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 0 10px 10px black;
+}
+
+#contact h2 {
+    color: #1e1e1e;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    margin: 0 auto 0.625rem;
+    padding: 0.3125rem 0.625rem;
+}
+#contact form input:focus,
+form textarea:focus {
+    outline: 1px solid var(--primary-color);
+    border: 0;
+    box-shadow: 0 0 0px 5px rgba(13, 109, 253, 0.25);
+}
+#contact form button {
+    font-size: 1.1875rem;
+}
+#contact p {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: var(--p-color);
+    width: 300;
+}
+
+#contact ul li {
+    color: var(--p-color);
+    font: 400 1rem;
+    line-height: 2rem;
+}
+#contact ul li i {
+    color: rgb(0, 120, 255);
+    line-height: 2rem;
+    margin-right: 0.7rem;
+}
+
+#contact .icon-list i {
+    font-size: 1.5rem;
+    line-height: 1.9375rem;
+    border: var(--primary-color) 0.3125rem solid;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 1.5rem;
+    position: relative;
+    transition: all 0.5s;
+    margin-left: 1rem;
+}
+#contact .icon-list i::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#contact .icon-list i:hover {
+    color: rgb(253, 253, 253);
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+/* END CONTACT */
+
+footer {
+    background-color: rgba(0, 98, 211, 1);
+    color: white;
+    box-shadow: 0px 0px 11px -7px black;
+}
+
+/* START RESPONSIVE */
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+    /* start header */
+    header h1 {
+        font-size: 4.5rem;
+    }
+    /* end header */
+}
+@media (min-width: 992px) {
+    /* START NAV */
+    nav li a {
+        color: white !important;
+        position: relative;
+        transition: all 0.5s;
+    }
+    nav li.first-child > a::after {
+        content: "";
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        transition: width 0.5s ease;
+    }
+
+    nav li:hover a::after,
+    nav li.first-child a.active::after {
+        width: 90%;
+    }
+
+    nav li:hover a {
+        color: white !important;
+    }
+    /* END NAV */
+}
+@media (min-width: 1200px) {
+}
